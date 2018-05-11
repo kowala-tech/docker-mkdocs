@@ -11,3 +11,9 @@ COPY ./ /root/
 
 RUN pip install mkdocs && \
 	pip install --user -r requirements.txt
+	
+RUN mkdir /documents
+RUN mkdir /site
+WORKDIR /documents
+
+CMD mkdocs serve
