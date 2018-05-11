@@ -1,0 +1,11 @@
+pipeline:
+
+  docker_bootnode_dev:
+    image: plugins/docker
+    repo: kowalatech/mkdocs
+    secrets: [ docker_username, docker_password ]
+    tags: latest
+    dockerfile: Dockerfile
+    when:
+      branch: [master]
+      event: [push, tag]
