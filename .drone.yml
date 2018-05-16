@@ -1,6 +1,6 @@
 pipeline:
 
-  docker_bootnode_dev:
+  build:
     image: plugins/docker
     repo: kowalatech/mkdocs
     secrets: [ docker_username, docker_password ]
